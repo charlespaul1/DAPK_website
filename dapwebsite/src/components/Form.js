@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form, Field } from 'formik';
-import { FormControl, FormLabel, Input, Select, button } from '@chakra-ui/react';
+import { FormControl, FormLabel, Input, Spinner, Button, Stack } from '@chakra-ui/react';
 import { object, string, date } from 'yup';
 // setting my initial values as empty strings
 const initialValues = {
@@ -27,20 +27,28 @@ const validationSchema = object().shape({
   County: string().required('County is required'),
 });
 //on submit function
-const onSubmit = (values, { setSubmitting }) => {
-  console.log(values);
-  setSubmitting(false);
-}
+// const [isSubmitting, setIsSubmitting] = useState(false);
 
-const regForm = () => {
+const Regform = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      onSubmit={onSubmit}
+      onSubmit={(values, actions) => {
+        setIsSubmitting(true);
+
+        setTimeout(() =>{
+          console.log(values);
+          actions.setSubmitting(false);
+          setIsSubmitting(false);
+        }, 2000);
+      }}
     >
-      {({ isSubmitting }) => (
+      {({ errors, touched, isSubmitting }) => (
         <Form>
+          <Stack>
           <Field name='name'>
             {({ field, form }) => (
               <FormControl
@@ -96,7 +104,7 @@ const regForm = () => {
               </FormControl>
             )}
           </Field>
-          <Field name='wardd'>
+          <Field name='ward'>
             {({ field, form }) => (
               <FormControl
                 isInvalid={form.errors.Ward && form.touched.Ward}
@@ -129,8 +137,24 @@ const regForm = () => {
               </FormControl>
             )}
           </Field>
-         
-        
+          <Button
+          type='submit'
+          colorScheme='blue'
+          isLoading={isSubmitting}
+          loadingText='Submitting'
+          variant='outline'
+          >
+          {isSubmitting ? (
+            <>
+            <Spinner size='sm' mr={2}/>
+            Submitting...
+            </>
+          ) : ( 
+            'Submit'
+            )}
+        </Button>
+
+         </Stack>
         </Form>
       )}
 
@@ -138,4 +162,4 @@ const regForm = () => {
   )
 }
 
-export default regForm
+export default Regform
