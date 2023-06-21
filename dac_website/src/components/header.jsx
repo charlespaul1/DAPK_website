@@ -1,30 +1,37 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import './header.css';
 
 const Header = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <div className='header'>
-      <nav className="navbar">
+      <nav className={`navbar ${isMenuOpen ? 'open' : ''}`}>
         <div className="logo">
           <h1>DAC</h1>
         </div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-         
-          <li>
-            <Link to="/register">Register</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link to="/donate">Donate</Link>
-          </li>
+        <div className={`menu-icon ${isMenuOpen ? 'hide' : ''}`} onClick={toggleMenu}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+        <div className={`times-icon ${isMenuOpen ? '' : 'hide'}`} onClick={closeMenu}>
+          <i className="fas fa-times"></i>
+        </div>
+        <ul className={`menu ${isMenuOpen ? 'show' : ''}`}>
+          <a href="#home" onClick={closeMenu}><li>Home</li></a>
+          <a href="#about" onClick={closeMenu}><li>About</li></a>
+          <a href="#register" onClick={closeMenu}><li>Register</li></a>
+          <a href="#donate" onClick={closeMenu}><li>Donate</li></a>
+          <a href="#contact" onClick={closeMenu}><li>Contact</li></a>
         </ul>
       </nav>
     </div>
