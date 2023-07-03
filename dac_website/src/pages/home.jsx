@@ -6,6 +6,7 @@ const HomePage = () => {
     <>
     <Header/>
     <div className="home">
+    <div className="hero-image"></div>
       <div className='top-home'>
       <img src={Logo} alt='logo' className='logo' 
       // style={{width: '300px', height: '300px', borderRadius: '50%'}}
@@ -15,7 +16,7 @@ const HomePage = () => {
       <div className='bottom-home'>
       <h3>The New Dawn has come!!!!</h3>
       <section>
-        <p>Join us in making a difference.</p>
+        <p>Join the revolution in making a difference.</p>
         <a href='#register'>
           <button>Register</button>
         </a>
