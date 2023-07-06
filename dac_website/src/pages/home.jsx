@@ -7,9 +7,9 @@ const HomePage = () => {
     <Header/>
     <div className="home">
     <div className="hero-image"></div>
+    <div className="content">
       <div className='top-home'>
       <img src={Logo} alt='logo' className='logo' 
-      // style={{width: '300px', height: '300px', borderRadius: '50%'}}
       />
       <h1>DEMOCRATIC ACTION COALITION PARTY</h1>
       </div>
@@ -21,9 +21,8 @@ const HomePage = () => {
           <button>Register</button>
         </a>
       </section>
-
       </div>
-     
+     </div>
     </div>
     
     </>

@@ -1,9 +1,8 @@
 import HomePage from "./pages/home"
 import About from "./pages/About"
-import Contact from "./pages/Contact"
 import Register from "./pages/Register"
 import Donate from "./pages/Donate"
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
 
@@ -22,12 +21,6 @@ function App() {
       <section id="donate">
         <Donate />
       </section>
-      <section id="contact">
-        <Contact />
-      </section>
-      
-      
-      
     </div>
   )
 }

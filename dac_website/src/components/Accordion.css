@@ -1,0 +1,37 @@
+.accordion {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    width: 500px;
+}
+  
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .accordion-title {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+  
+  .accordion-title.active {
+    background-color: #ddd;
+  }
+  
+  .accordion-content {
+    padding: 10px;
+  }
+.accordion-icon {
+  float: right;
+  margin-top: 5px;
+  margin-right: 10px;
+  transition: transform 0.6s ease;
+}
+
+.accordion-icon.active {
+  transform: rotate(180deg);
+}
+
+  

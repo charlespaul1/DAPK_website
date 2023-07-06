@@ -31,7 +31,6 @@ const Header = () => {
           <a href="#about" onClick={closeMenu}><li>About</li></a>
           <a href="#register" onClick={closeMenu}><li>Register</li></a>
           <a href="#donate" onClick={closeMenu}><li>Donate</li></a>
-          <a href="#contact" onClick={closeMenu}><li>Contact</li></a>
         </ul>
       </nav>
     </div>
