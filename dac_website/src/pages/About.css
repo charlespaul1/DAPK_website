@@ -1,5 +1,7 @@
 .about{
     font-family: 'Cormorant Garamond', serif;
+    background: repeating-linear-gradient(90deg, #000AFFFF 0%, #71C4FFFF 100%);
+
 }
 
 .about h1{

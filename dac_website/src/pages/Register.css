@@ -1,6 +1,7 @@
 .registration-container{
-    background: #0077ff;
     padding: 1.5rem;
+    background: repeating-linear-gradient(90deg, #000AFFFF 0%, #71C4FFFF 100%);
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .registration-container h1{

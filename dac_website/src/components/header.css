@@ -9,7 +9,7 @@
   }
   
   .navbar {
-    background-color: #6276e7;
+    background: repeating-linear-gradient(90deg, #000AFFFF 0%, #71C4FFFF 100%);
     color: #000000;
     padding: 10px;
     font-size: 20px;
