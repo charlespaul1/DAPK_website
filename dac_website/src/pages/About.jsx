@@ -34,9 +34,12 @@ const About = () => {
         <p>To create a harmonious and progressive nation that upholds democratic values, fosters social justice, and enhances the well-being of all its citizens. By pursuing this vision, we aim to build a brighter future for generations to come</p>
       </div>
       </div>
-
+      <div className="leaders">
       <h2 className="our-leaders">Our Leaders</h2>
         <Cards persons={persons} />
+      </div>
+
+      
         <div className="membership-support">
         <div className="section-membership">
           <h2>Party Membership</h2>

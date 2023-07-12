@@ -111,3 +111,28 @@ button::before {
     padding: 20px;
 
 }
+@media screen and (max-width: 768px){
+  .about{
+    height: auto;
+  }
+  .section_description{
+    flex-direction: column;
+  }
+  .section-vision{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .leader{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .membership-support{
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .section-membership{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+}
